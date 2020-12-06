@@ -8,12 +8,14 @@ import {
 
 import './App.css';
 
-import Menu from './Menu/Menu';
-import Hero from './Hero/Hero';
-import HomePage from './HomePage/HomePage';
-import Footer from './Footer/Footer';
-import AboutPage from './AboutPage/AboutPage';
-import LoginPage from './LoginPage/LoginPage';
+import Menu from './Components/Menu';
+import Hero from './Components/Hero';
+import HomePage from './Pages/HomePage';
+import Footer from './Components/Footer';
+import AboutPage from './Pages/AboutPage';
+import LoginPage from './Pages/LoginPage';
+import Dashboard from './Components/Dashboard';
+import MembersPage from './Pages/MembersPage';
 
 
 function App() {
@@ -26,8 +28,9 @@ function App() {
          <Route path="/about">
            <AboutPage/>
          </Route>
-         <Route path="/login">
-           <LoginPage/>
+         <Route path="/members">
+           <Dashboard/>
+           <MembersPage/>
          </Route>
          <Route path="/">
            <HomePage/>
