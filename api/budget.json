@@ -1,0 +1,34 @@
+
+{
+
+    "expenses": [
+    {
+        "title": "Eat out",
+        "amount": 90
+    },
+    {
+        "title":"Rent",
+        "amount": 1200
+    },
+    {
+        "title": "Groceries",
+        "amount": 250
+    },
+    {
+        "title":"Phone",
+        "amount": 89
+    },
+    {
+        "title":"Car",
+        "amount": 400
+    },
+    {
+        "title":"Gym",
+        "amount": 35
+    },
+    {
+        "title":"DigitalOcean",
+        "amount": 4
+    }
+    ]
+}

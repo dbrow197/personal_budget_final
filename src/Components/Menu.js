@@ -12,6 +12,7 @@ function Menu() {
         <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/members">Members</Link></li>
+            <li><Link to="/login">Login</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><a href="https://github.com/dbrow197/personal_budget_final.git">Project Repo</a></li>
         </ul>

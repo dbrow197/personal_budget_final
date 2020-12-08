@@ -1,9 +1,10 @@
 import React from 'react';
-
+import InputArea from '../Components/InputArea'
 
 function MembersPage() {
   return (
-    <div>
+    <div className="container center">
+      <InputArea/>
      MembersPage
     </div>
   );

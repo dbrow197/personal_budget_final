@@ -10,11 +10,12 @@ import './App.css';
 
 import Menu from './Components/Menu';
 import Hero from './Components/Hero';
-import HomePage from './Pages/HomePage';
 import Footer from './Components/Footer';
+import Dashboard from './Components/Dashboard';
+
+import HomePage from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage';
 import LoginPage from './Pages/LoginPage';
-import Dashboard from './Components/Dashboard';
 import MembersPage from './Pages/MembersPage';
 
 
@@ -30,7 +31,12 @@ function App() {
          </Route>
          <Route path="/members">
            <Dashboard/>
+          
            <MembersPage/>
+         </Route>
+         <Route path="/login">
+           <LoginPage/>
+           
          </Route>
          <Route path="/">
            <HomePage/>
