@@ -8,7 +8,7 @@ function HomePage() {
 
         <div className="page-area">
 
-            <div className="text-box">
+            <div className="text-box jumbotron">
                 <h1>Stay on track</h1>
                 <p>
                     Do you know where you are spending your money? If you really stop to track it down,
@@ -17,14 +17,14 @@ function HomePage() {
                 </p>
             </div>
     
-            <div className="text-box">
+            <div className="text-box jumbotron">
                 <h1>Alerts</h1>
                 <p>
                     What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
                 </p>
             </div>
     
-            <div className="text-box">
+            <div className="text-box jumbotron">
                 <h1>Results</h1>
                 <p>
                     People who stick to a financial plan, budgeting every expense, get out of debt faster!
@@ -33,14 +33,14 @@ function HomePage() {
                 </p>
             </div>
     
-            <div className="text-box">
+            <div className="text-box jumbotron">
                 <h1>Free</h1>
                 <p>
                     This app is free!!! And you are the only one holding your data!
                 </p>
             </div>
     
-            <div className="text-box">
+            <div className="text-box jumbotron">
                 <h1>Stay on track</h1>
                 <p>
                     Do you know where you are spending your money? If you really stop to track it down,
@@ -49,14 +49,14 @@ function HomePage() {
                 </p>
             </div>
     
-            <div className="text-box">
+            <div className="text-box jumbotron">
                 <h1>Alerts</h1>
                 <p>
                     What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
                 </p>
             </div>
     
-            <div className="text-box">
+            <div className="text-box jumbotron">
                 <h1>Results</h1>
                 <p>
                     People who stick to a financial plan, budgeting every expense, get out of debt faster!

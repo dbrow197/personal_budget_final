@@ -39,7 +39,7 @@ export default class PieChart extends React.Component{
     createChart() {
         let context = document.getElementById('budget-chart');
         new Chart(context, {
-            type: 'bar',
+            type: 'pie',
             data: this.state.chartData
         });
     };

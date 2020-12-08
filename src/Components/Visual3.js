@@ -39,7 +39,7 @@ export default class Visual3 extends React.Component{
     createChart() {
         let context = document.getElementById('budget-chart');
         new Chart(context, {
-            type: 'pie',
+            type: 'line',
             data: this.state.chartData
         });
     };

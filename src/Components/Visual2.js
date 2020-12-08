@@ -39,7 +39,7 @@ export default class visual2 extends React.Component{
     createChart() {
         let context = document.getElementById('budget-chart');
         new Chart(context, {
-            type: 'line',
+            type: 'horizontalBar',
             data: this.state.chartData
         });
     };
