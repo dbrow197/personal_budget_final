@@ -1,12 +1,25 @@
 const express = require('express');
 const cors = require('cors');
+const mongoose = require('mongoose');
+require('dotenv').config();
+
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.use(cors());
-app.get('/budget', (request, response) => {
-    response.json(require('./budget.json'));
-});
+app.use(express.json());
+
+const uri = process.env.ATLAS_URI;
+mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true  }
+    );
+    const connection = mongoose.connection;
+    connection.once('open', () => {
+        console.log("MongoBD database connection established successfully");
+    })
+
+//app.get('/budget', (request, response) => {
+//    response.json(require('./budget.json'));
+//});
 
 app.listen(port, () => {
     console.log(`Example app listening on http://localhost:${port}`)
