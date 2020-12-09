@@ -21,6 +21,14 @@ mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedT
 //    response.json(require('./budget.json'));
 //});
 
+const budgetRouter = require('./routes/expenses');
+const userRouter = require('./routes/users');
+const monthlyBudget = require('./routes/monthlyBudgets')
+
+app.use('/expenses', budgetRouter);
+app.use('/users', userRouter);
+app.use('/monthlyBudgets', monthlyBudget)
+
 app.listen(port, () => {
     console.log(`Example app listening on http://localhost:${port}`)
 });
