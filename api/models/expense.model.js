@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 
 const expenseSchema = new Schema({
-    username: { type: String, required: true },
+    username: { type: String, required: true },//ref user model here
     item: {type: String, required: true},
     date: {type: Date, required: true},
     amount: {type: Number, required: true},

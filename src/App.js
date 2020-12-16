@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import {
   BrowserRouter as Router,
   Switch,
@@ -29,18 +29,22 @@ function App() {
          <Route path="/about">
            <AboutPage/>
          </Route>
+
          <Route path="/members">
            <Dashboard/>
           
            <MembersPage/>
          </Route>
+         
          <Route path="/login">
            <LoginPage/>
            
          </Route>
+
          <Route path="/">
            <HomePage/>
          </Route>
+
        </Switch>
      </div>
      <Footer/>

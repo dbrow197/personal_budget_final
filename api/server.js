@@ -17,6 +17,8 @@ mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedT
         console.log("MongoBD database connection established successfully");
     })
 
+//will return _id: from users table to expenses and monthlybudgets.
+
 //app.get('/budget', (request, response) => {
 //    response.json(require('./budget.json'));
 //});
