@@ -1,9 +1,22 @@
 import React from 'react';
-
+import {Link} from "react-router-dom";
 
 function HomePage() {
   return (
     <main>
+         <div className="col s6 center">
+              <Link
+                to="/login"
+                style={{
+                  width: "140px",
+                  borderRadius: "3px",
+                  letterSpacing: "1.5px"
+                }} 
+                className="btn btn-secondary waves-effect waves-light hoverable accent-3"
+              >
+                Get Started
+              </Link>
+            </div>
     <div className="container center">
 
         <div className="page-area">

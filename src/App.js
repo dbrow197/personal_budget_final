@@ -12,6 +12,7 @@ import Menu from './Components/Menu';
 import Hero from './Components/Hero';
 import Footer from './Components/Footer';
 import Dashboard from './Components/Dashboard';
+import Register from './Components/Register';
 
 import HomePage from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage';
@@ -38,8 +39,11 @@ function App() {
          
          <Route path="/login">
            <LoginPage/>
-           
          </Route>
+
+        <Route path="/register">
+          <Register/>
+        </Route>
 
          <Route path="/">
            <HomePage/>
