@@ -2,26 +2,22 @@ import React, {Component} from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
-export default class InputArea extends Component {
+class InputArea extends Component {
     constructor(props) {
         super(props);
         console.log("in Constructor")
     
-        this.onChangeItem = this.onChangeItem.bind(this);
-        this.onChangeAmount = this.onChangeAmount.bind(this);
-       // this.onChangeUsername = this.onChangeUsername.bind(this);
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
         this.onChangeDate = this.onChangeDate.bind(this);
 
         this.state = {
             // username: '',
              item:'',
-             date: new Date(),
-             amount: 0
+             amount: 0,
+             date: new Date()
          }       
     }
-
-
-
     /*
      onChangeUsername(e) {
         this.setState({
@@ -29,19 +25,12 @@ export default class InputArea extends Component {
         });
     }
     */
-    onChangeItem(e) {
-       console.log("in onChangeItem")
+    onChange(e) {
+       console.log("in onChange")
         this.setState({
-            item: e.target.value
+            [e.target.name]: e.target.value
         });
     }
-
-    onChangeAmount(e) {
-        this.setState({
-            amount: e.target.value
-        });
-    }
-   
     onChangeDate(date) {
         this.setState({
             date: date
@@ -60,7 +49,7 @@ export default class InputArea extends Component {
 
         console.log(expense)
 
-        window.location = '/';
+       // window.location = '/members';
     }
 
     render() {
@@ -72,20 +61,24 @@ export default class InputArea extends Component {
                 <div className="form-group">
                     <label>Item: </label>
                     <input type="text"
+                        name="item"
                         required
                         className="form-control"
                         placeholder= "Enter an Item"
+                        onChange={this.onChange}
                         value={this.state.item}
-                        onChange={this.onChangeItem}
+                        
                     />
                 </div>
                 <div className="form-group">
                     <label>Amount: </label>
                     <input type="text"
+                    name="amount"
                      required
                      className="form-control"
+                     onChange={this.onChange}
                      value={this.state.amount}
-                     onChange={this.onChangeAmount}
+                    
                      />
                 </div>
                 <div className="form-group">
@@ -109,3 +102,5 @@ export default class InputArea extends Component {
     );
     }
 }
+
+export default InputArea;

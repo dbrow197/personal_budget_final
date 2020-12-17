@@ -6,8 +6,9 @@ import {
   Route
 } from "react-router-dom";
 
-import './App.css';
 
+
+import './App.css';
 import Menu from './Components/Menu';
 import Hero from './Components/Hero';
 import Footer from './Components/Footer';
@@ -22,6 +23,7 @@ import MembersPage from './Pages/MembersPage';
 
 function App() {
   return (
+
     <Router>
      <Menu/>
      <Hero/>
@@ -36,11 +38,11 @@ function App() {
           
            <MembersPage/>
          </Route>
-         
+        
          <Route path="/login">
            <LoginPage/>
          </Route>
-
+        
         <Route path="/register">
           <Register/>
         </Route>
@@ -53,6 +55,7 @@ function App() {
      </div>
      <Footer/>
     </Router>
+
   );
 }
 
