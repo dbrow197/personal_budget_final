@@ -1,67 +1,27 @@
-import React from 'react';
-import axios from 'axios';
-import {Chart} from 'chart.js';
+import React, {Component } from 'react';
+import Iframe from 'react-iframe';
 
-export default class visual2 extends React.Component{
-    
-    state = {
-        chartData: {
-            datasets: [{
-                data: [],
-                backgroundColor: [
-                    'rgba(255, 99, 132)',
-                    'rgba(54, 162, 235)',
-                    'rgba(255, 206, 86)',
-                    'rgba(75, 192, 192)',
-                    'rgba(153, 102, 255)',
-                    'rgba(255, 159, 64)',
-                    'rgb(255,80,239)'
-                ]
-            }],
-            labels: []
-        }
-    };
 
-    async getExpenses() {
-        try {
-            const response = await axios.get('http://localhost:5000/budget');
-
-            response.data.expenses?.forEach(expense => {
-                this.state.chartData.datasets[0].data.push(expense.amount);
-                this.state.chartData.labels.push(expense.title);
-            });
-        } catch (error) {
-            console.log(error)
-        }
-    };
-
-    
-    createChart() {
-        let context = document.getElementById('budget-chart');
-        new Chart(context, {
-            type: 'horizontalBar',
-            data: this.state.chartData
-        });
-    };
-
-    async componentDidMount() {
-        await this.getExpenses();
-        this.createChart();
-    }
-
-render () {
+class Chart1 extends Component {
+  render(){
   return (
-      <main className="container center">
-    <section className="page-area">
-    <article>
-        <h1 style={{'textAlign': 'center'}}>Budget</h1>
-        <canvas id="budget-chart" width="400" height="400"/>
-    </article>
+    <main className="container-center page-area col-sm-3 ">
+      <section className="page-area">
+     <h1 style={{'textAlign': 'center'}}>Budget</h1>
+     <script src="https://unpkg.com/@mongodb-js/charts-embed-dom@beta"></script>
+    <div id="chart" container-center></div>
+    <Iframe style="background: #FFFFFF;
+    border: none;border-radius: 2px;
+    box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);"
+     width="640" height="480" 
+     src="https://charts.mongodb.com/charts-personal_budget_final-pwjjt/embed/charts?id=874c0d4c-5afe-41d5-beb6-18a188563171&theme=light">
+
+    </Iframe>
     </section>
-    </main>
+   </main>
+   
   );
+  }
 }
 
-}
-
-
+export default Chart1;

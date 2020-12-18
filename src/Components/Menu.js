@@ -9,9 +9,9 @@ function Menu() {
 
 
     
-    <nav>
+    <nav className= "form-group grey darken-2">
     
-    <div className="menu" aria-label="navigation menu">
+    <div className="nav-link btn btn-secondary" aria-label="navigation menu">
         <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/members">Members</Link></li>

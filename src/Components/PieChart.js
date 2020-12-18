@@ -24,7 +24,7 @@ export default class PieChart extends React.Component{
 
     async getExpenses() {
         try {
-            const response = await axios.get('http://localhost:5000/budget');
+            const response = await axios.get('http://localhost:5000/expenses');
 
             response.data.expenses?.forEach(expense => {
                 this.state.chartData.datasets[0].data.push(expense.amount);
